@@ -1,0 +1,22 @@
+{
+  "name": "Change Web Extention Name",
+  "version": "0.0.1",
+  "description": "Change the description of this web extension",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "./popup/index.html",
+    "default_title": "Open the popup",
+    "default_icon":"./icons/icon-16.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "js": ["content/index.js"],
+      "css": ["content/index.css"],
+      "matches": ["https://*/*"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.dist.js"]
+  }
+}
