@@ -64,16 +64,6 @@ let ExtensionConfig = Object.assign({}, config, {
     ]
 });
 
-let AlpineConfig = Object.assign({}, config, {
-    entry: {
-      'alpine': './alpine.js'
-    },
-    output: {
-       path: __dirname + '/extension/dist/',
-       filename: "alpine.dist.js"
-    },
-});
-
 module.exports = [
-    ExtensionConfig, AlpineConfig,
+    ExtensionConfig,
 ];
