@@ -1,12 +1,32 @@
-# Alpine/Tailwind Chrome Extension Boilerplate
-[WIP] This is a starting place for building a web extension with Tailwindcss & Alpinejs
+# Tailwind/Alpine Chrome Extension Boilerplate
+This is a starting place for building a Web Extension with Tailwindcss & Alpinejs
 
----
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="Hello World Popup" src="./screenshot-1.png">  *Basic Popup with Tailwind* |  <img width="1604" alt="Alpine Button Clicked" src="./screenshot-2.png"> *Alpine `@click` Works!* |<img width="1604" alt="Hello World Options" src="./screenshot-3.png"> *Basic Options*|
 
-## Goals
+## Installation
+### Setup local project
+* `git clone git@github.com:thomasjohnkane/tailwind-alpine-chrome-extension.git`
+* `npm i && npm run dev`
+
+### Install on Chrome
+* Navigate to `chrome://extensions` in Chrome;
+* Enable the **Developer mode**
+* Click on **Load unpacked extension** (upper left nav)
+* Upload the entire `extension` folder
+
+## Why use this?
+* It automatically puts [tailwindcss.com](https://tailwindcss.com/) into your project
+* It automatically puts [alpinejs](https://github.com/alpinejs/alpine) into your project
+* Hot reload (watches files and updates chrome)
+* Cross browser support (Chrome & Firefox, Safari/Edge TBD)
+* Provides basic `popup.html` & `options.html` (embeded in settings page)
+
+## Goals of project
 - Create a starting point for building web extensions
 - Use alpine.js and tailwind.css
-- Be cross browser (chrome, firefox, safari)
+- Be cross browser (chrome, firefox, safari, edge?)
 - Full DX path integrated
     - Readme to set it up
     - Watch script
@@ -15,53 +35,38 @@
     - deploy script (create zip for submitting to store)
     - Deploy instructions (per browser)
 
-## Folder Structure
--src
-    - icons
-        - icon-128.png
-        - icon-64.png
-        - icon-38.png
-        - icon-19.png
-        - icon-16.png
-    - options
-        - options.js
-        - options.html
-        - options.css
-    - popup
-        - routes
-            - index.js
-            - pages
-        - popup.js
-        - popup.html
-        - popup.css
-    - content
-        - content.js
-        - content.css
-    - manifest.js
-    - background.js
-    - tailwind.css
-    - tailwind.dist.css
-    - alpine.js
-    - alpine.dist.js
-- config
-    - development.json
-    - production.json
-- webpack.config.js
-- package.json
-- .gitignore
-- README.md
+## Roadmap
+- [X] Create folder structure
+- [X] Add webpack
+- [X] Make hello world work in dev
+- [X] Add Tailwindcss
+- [X] Add Alpinejs
+- [X] Add package.json build scripts
+- [X] Add hot reloading
+- [X] Add basic options.html page
+- [ ] Handle sub views and routes for popup
+- [ ] Add basic example of content.js
+- [ ] Add basic example of background.js
+- [X] Update readme with instructions, etc
+- [X] Push to github
+- [ ] Add build-zip script for deployment
+- [ ] Tag release v1.0
 
-## Steps
-[X] Create folder structure
-[X] Add webpack
-[X] Make hello world work in dev
-[X] Add Tailwindcss
-[X] Add Alpinejs
-[X] Add package.json build scripts
-[X] Add hot reloading
-[] Handle sub views and routes for popup
-[] do basic example of content.js
-[] add basic example of background
-[] update readme with instructions, etc
-[] push to github
+## Credit
+* Thanks to Caleb Porzio for Alpinejs
+* Thanks to Adam Watham for Tailwindcss
+* Thanks to @rubenspgcavalcante for Webpack Extension Reload plugin
+* Thanks to @Kocal, @EmailThis, and @williankeller for inspiration
+
+## Security
+
+If you discover any security related issues, please email instead of using the issue tracker.
+
+## Contributing
+
+1. Fork it (<https://github.com/thomasjohnkane/tailwind-alpine-chrome-extension/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
 

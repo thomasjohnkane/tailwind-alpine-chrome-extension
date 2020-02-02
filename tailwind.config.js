@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     minWidth: {
       '0': '0',
-      'popup': '400px',
+      'popup': '350px',
       full: '100%'
     },
     extend: {}

@@ -1,5 +1,5 @@
 {
-  "name": "alpine-tailwind-web-extension",
+  "name": "tailwind-alpine-web-extension",
   "version": "1.0.0",
   "scripts": {
     "watch:tailwind": "NODE_ENV=development postcss src/tailwind.css -o extension/dist/tailwind.dist.css -w",
