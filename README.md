@@ -3,7 +3,7 @@ This is a starting place for building a Web Extension with Tailwindcss & Alpinej
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="Hello World Popup" src="./screenshot-1.png">  *Basic Popup with Tailwind* |  <img width="1604" alt="Alpine Button Clicked" src="./screenshot-2.png"> *Alpine `@click` Works!* |<img width="1604" alt="Hello World Options" src="./screenshot-3.png"> *Basic Options*|
+|<img width="1604" alt="Hello World Popup" src="https://user-images.githubusercontent.com/8945177/73615774-972c5300-45d0-11ea-8889-0e813ff172c2.png">  *Basic Popup with Tailwind* |  <img width="1604" alt="Alpine Button Clicked" src="https://user-images.githubusercontent.com/8945177/73615775-972c5300-45d0-11ea-8f29-5a7626767f0f.png"> *Alpine `@click` Works!* |<img width="1604" alt="Hello World Options" src="https://user-images.githubusercontent.com/8945177/73615776-97c4e980-45d0-11ea-836f-b5819a7aa410.png"> *Basic Options*|
 
 ## Installation
 ### Setup local project
