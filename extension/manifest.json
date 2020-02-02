@@ -4,19 +4,23 @@
   "description": "Change the description of this web extension",
   "manifest_version": 2,
   "browser_action": {
-    "default_popup": "./popup/index.html",
+    "default_popup": "./dist/popup.html",
     "default_title": "Open the popup",
-    "default_icon":"./icons/icon-16.png"
+    "default_icon":"./dist/icons/icon-16.png"
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "content_scripts": [
     {
-      "js": ["content/index.js"],
-      "css": ["content/index.css"],
+      "js": ["dist/content.dist.js"],
+      "css": ["dist/content.css"],
       "matches": ["https://*/*"]
     }
   ],
   "background": {
-    "scripts": ["background.dist.js"]
+    "scripts": ["dist/background.dist.js"]
+  },
+  "options_ui": {
+    "page": "dist/options.html",
+    "open_in_tab": false
   }
 }

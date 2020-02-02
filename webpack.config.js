@@ -1,5 +1,6 @@
 const ExtensionReloader  = require('webpack-extension-reloader');
-var path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 const contentScripts = {
   content: './content/index.js'
@@ -21,7 +22,7 @@ let ExtensionConfig = Object.assign({}, config, {
       ...extensionPages
     },
     output: {
-      path: __dirname + '/src',
+      path: __dirname + '/extension/dist/',
       filename: '[name].dist.js',
     },
     plugins: [
@@ -33,7 +34,33 @@ let ExtensionConfig = Object.assign({}, config, {
           extensionPage: Object.keys(extensionPages),
           background: 'background'
         }
-      })
+      }),
+      new CopyPlugin([
+        {
+          from: './icons/*',
+          to: __dirname + '/extension/dist/',
+        },
+        {
+          from: './popup/index.html',
+          to: __dirname + '/extension/dist/popup.html',
+        },
+        {
+          from: './popup/index.css',
+          to: __dirname + '/extension/dist/popup.css',
+        },
+        {
+          from: './options/index.html',
+          to: __dirname + '/extension/dist/options.html',
+        },
+        {
+          from: './options/index.css',
+          to: __dirname + '/extension/dist/options.css',
+        },
+        {
+          from: './content/index.css',
+          to: __dirname + '/extension/dist/content.css',
+        },
+      ]),
     ]
 });
 
@@ -42,7 +69,7 @@ let AlpineConfig = Object.assign({}, config, {
       'alpine': './alpine.js'
     },
     output: {
-       path: __dirname + '/src',
+       path: __dirname + '/extension/dist/',
        filename: "alpine.dist.js"
     },
 });
