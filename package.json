@@ -2,10 +2,10 @@
   "name": "tailwind-alpine-web-extension",
   "version": "1.0.0",
   "scripts": {
-    "watch:tailwind": "NODE_ENV=development postcss src/tailwind.css -o extension/dist/tailwind.dist.css -w",
-    "dev:tailwind": "NODE_ENV=development postcss src/tailwind.css -o extension/dist/tailwind.dist.css",
-    "build:tailwind": "NODE_ENV=production postcss src/tailwind.css -o extension/dist/tailwind.dist.css",
-    "dev": "concurrently \"npm run watch:tailwind\" \"NODE_ENV=development webpack --config webpack.config.js --mode=development --watch\"",
+    "watch:tailwind": "cross-env NODE_ENV=development postcss src/tailwind.css -o extension/dist/tailwind.dist.css -w",
+    "dev:tailwind": "cross-env NODE_ENV=development postcss src/tailwind.css -o extension/dist/tailwind.dist.css",
+    "build:tailwind": "cross-env NODE_ENV=production postcss src/tailwind.css -o extension/dist/tailwind.dist.css",
+    "dev": "concurrently \"npm run watch:tailwind\" \"cross-env NODE_ENV=development webpack --config webpack.config.js --mode=development --watch\"",
     "build": "npm run build:tailwind && webpack --mode production"
   },
   "devDependencies": {
@@ -13,7 +13,7 @@
     "autoprefixer": "^9.7.4",
     "concurrently": "^5.1.0",
     "copy-webpack-plugin": "^5.1.1",
-    "cross-env": "^7.0.0",
+    "cross-env": "^7.0.3",
     "postcss-cli": "^7.1.0",
     "postcss-loader": "^3.0.0",
     "tailwindcss": "^1.1.4",
