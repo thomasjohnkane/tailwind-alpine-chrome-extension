@@ -1,4 +1,5 @@
 module.exports = {
+  content: ["./src/**/*.{html,js}"],
   theme: {
     minWidth: {
       '0': '0',

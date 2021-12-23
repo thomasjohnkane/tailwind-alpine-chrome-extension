@@ -35,32 +35,34 @@ let ExtensionConfig = Object.assign({}, config, {
           background: 'background'
         }
       }),
-      new CopyPlugin([
-        {
-          from: './icons/*',
-          to: __dirname + '/extension/dist/',
-        },
-        {
-          from: './popup/index.html',
-          to: __dirname + '/extension/dist/popup.html',
-        },
-        {
-          from: './popup/index.css',
-          to: __dirname + '/extension/dist/popup.css',
-        },
-        {
-          from: './options/index.html',
-          to: __dirname + '/extension/dist/options.html',
-        },
-        {
-          from: './options/index.css',
-          to: __dirname + '/extension/dist/options.css',
-        },
-        {
-          from: './content/index.css',
-          to: __dirname + '/extension/dist/content.css',
-        },
-      ]),
+      new CopyPlugin({
+          patterns: [
+            {
+                from: './icons/*',
+                to: __dirname + '/extension/dist/',
+            },
+            {
+                from: './popup/index.html',
+                to: __dirname + '/extension/dist/popup.html',
+            },
+            {
+                from: './popup/index.css',
+                to: __dirname + '/extension/dist/popup.css',
+            },
+            {
+                from: './options/index.html',
+                to: __dirname + '/extension/dist/options.html',
+            },
+            {
+                from: './options/index.css',
+                to: __dirname + '/extension/dist/options.css',
+            },
+            {
+                from: './content/index.css',
+                to: __dirname + '/extension/dist/content.css',
+            },
+          ]
+      }),
     ]
 });
 
