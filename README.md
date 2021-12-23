@@ -1,4 +1,4 @@
-# Tailwind/Alpine Chrome Extension Boilerplate
+# Tailwind3/Alpine3 Web Extension Boilerplate
 This is a starting place for building a Web Extension with Tailwindcss & Alpinejs
 
 | | | |
